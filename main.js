@@ -16,6 +16,7 @@ function myFunction(){
         y = prompt (`Caccia il ${i}° numero`)
         if (simon[i] != y){
             document.getElementById("risultato").innerHTML = "Imbecille ! Manco cinque numeri riesci a memorizzare !"
+            break
         }
         else {
             document.getElementById("risultato").innerHTML = "Bravo hai vinto"
