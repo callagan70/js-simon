@@ -1,40 +1,26 @@
 var simon = []
-var risposta =[]
+// var risposta =[]
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 1; i < 6; i++) {
             x = Math.floor(Math.random() * 4 +1)
-                document.getElementById("numerorandom").innerHTML = x
-                simon.push(x)}
-
-
-numero(simon)
-
-function numero(simon){
-    for (let i = 0; i < 5; i++) {
-        setTimeout (numero, 3000)
-               function numero () {
-                document.getElementById("numerorandom").innerHTML = simon[i]
-            };
+                y = "Il " + i + "° numero é: " + x
+                document.getElementById("numerorandom").innerHTML += `<p>${y}</p>`
+                simon.push(x)
     }
-}
 
 
+setTimeout (myFunction, 2000);
 
 console.log(simon)
 
-// for (let i = 0; i < 5; i++) {
-//     y = prompt ("Caccia il" + i + "° numero")
-//     if (simon[i] == )
-
-// }
-
-
-
-
-
-
-
-
-// clearInterval(clock)
-// setTimeout (myFunction, 3000);
-
+function myFunction(){
+for (let i = 0; i < 5; i++) {
+    y = prompt ("Caccia il " + i + "° numero")
+    if (simon[i] != y){
+        document.getElementById("risultato").innerHTML = "Imbecille ! Manco cinque numeri riesci a memorizzare !"
+        }
+        else {
+            document.getElementById("risultato").innerHTML = "Bravo hai vinto"
+        }
+    }
+}
